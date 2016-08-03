@@ -20,14 +20,18 @@ namespace EDMissionSolver
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            //lsvMissions.Items[0].BackColor = Color.LimeGreen;
-            //lsvMissions.Items[1].BackColor = Color.PaleVioletRed;
+            nmcHoldCapacity.Select(0,1);
         }
 
         private void btnAddMission_Click(object sender, EventArgs e)
         {
             ++ids;
             lsvMissions.Items.Add(new ListViewItem(new[] {ids.ToString(), nmcCargo.Value.ToString(), nmcPay.Value.ToString(), tbDest.Text}));
+            nmcCargo.Value = 0;
+            nmcPay.Value = 0;
+            tbDest.Text = "";
+            nmcCargo.Focus();
+            nmcCargo.Select(0,1);
         }
 
         private void btnRemove_Click(object sender, EventArgs e)

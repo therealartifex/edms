@@ -64,7 +64,7 @@
             this.lsvMissions.Location = new System.Drawing.Point(12, 36);
             this.lsvMissions.Name = "lsvMissions";
             this.lsvMissions.Size = new System.Drawing.Size(233, 214);
-            this.lsvMissions.TabIndex = 0;
+            this.lsvMissions.TabIndex = 4;
             this.lsvMissions.UseCompatibleStateImageBehavior = false;
             this.lsvMissions.View = System.Windows.Forms.View.Details;
             // 
@@ -96,7 +96,7 @@
             this.btnRemove.Location = new System.Drawing.Point(269, 198);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(174, 23);
-            this.btnRemove.TabIndex = 1;
+            this.btnRemove.TabIndex = 2;
             this.btnRemove.Text = "Remove Mission";
             this.btnRemove.UseVisualStyleBackColor = true;
             this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
@@ -106,7 +106,7 @@
             this.btnSolve.Location = new System.Drawing.Point(269, 227);
             this.btnSolve.Name = "btnSolve";
             this.btnSolve.Size = new System.Drawing.Size(174, 23);
-            this.btnSolve.TabIndex = 2;
+            this.btnSolve.TabIndex = 3;
             this.btnSolve.Text = "Solve";
             this.btnSolve.UseVisualStyleBackColor = true;
             this.btnSolve.Click += new System.EventHandler(this.btnSolve_Click);
@@ -134,7 +134,7 @@
             this.gbMission.Location = new System.Drawing.Point(269, 36);
             this.gbMission.Name = "gbMission";
             this.gbMission.Size = new System.Drawing.Size(174, 135);
-            this.gbMission.TabIndex = 4;
+            this.gbMission.TabIndex = 1;
             this.gbMission.TabStop = false;
             this.gbMission.Text = "New Mission";
             // 
@@ -144,7 +144,7 @@
             this.label5.Location = new System.Drawing.Point(6, 80);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(63, 13);
-            this.label5.TabIndex = 13;
+            this.label5.TabIndex = 6;
             this.label5.Text = "Destination:";
             // 
             // label4
@@ -153,7 +153,7 @@
             this.label4.Location = new System.Drawing.Point(41, 52);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(28, 13);
-            this.label4.TabIndex = 12;
+            this.label4.TabIndex = 5;
             this.label4.Text = "Pay:";
             // 
             // label1
@@ -162,7 +162,7 @@
             this.label1.Location = new System.Drawing.Point(31, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 13);
-            this.label1.TabIndex = 9;
+            this.label1.TabIndex = 4;
             this.label1.Text = "Cargo:";
             // 
             // nmcPay
@@ -176,14 +176,14 @@
             0});
             this.nmcPay.Name = "nmcPay";
             this.nmcPay.Size = new System.Drawing.Size(93, 23);
-            this.nmcPay.TabIndex = 8;
+            this.nmcPay.TabIndex = 1;
             // 
             // tbDest
             // 
             this.tbDest.Location = new System.Drawing.Point(75, 77);
             this.tbDest.Name = "tbDest";
             this.tbDest.Size = new System.Drawing.Size(93, 20);
-            this.tbDest.TabIndex = 8;
+            this.tbDest.TabIndex = 2;
             // 
             // nmcCargo
             // 
@@ -196,7 +196,7 @@
             0});
             this.nmcCargo.Name = "nmcCargo";
             this.nmcCargo.Size = new System.Drawing.Size(93, 23);
-            this.nmcCargo.TabIndex = 6;
+            this.nmcCargo.TabIndex = 0;
             // 
             // nmcHoldCapacity
             // 
@@ -209,7 +209,7 @@
             0});
             this.nmcHoldCapacity.Name = "nmcHoldCapacity";
             this.nmcHoldCapacity.Size = new System.Drawing.Size(55, 23);
-            this.nmcHoldCapacity.TabIndex = 7;
+            this.nmcHoldCapacity.TabIndex = 0;
             // 
             // label2
             // 
@@ -217,7 +217,7 @@
             this.label2.Location = new System.Drawing.Point(147, 11);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 13);
-            this.label2.TabIndex = 10;
+            this.label2.TabIndex = 5;
             this.label2.Text = "Ship Hold Capacity:";
             // 
             // frmMain
