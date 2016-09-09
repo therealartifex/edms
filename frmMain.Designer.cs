@@ -45,10 +45,13 @@
             this.nmcCargo = new System.Windows.Forms.NumericUpDown();
             this.nmcHoldCapacity = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
+            this.ssResult = new System.Windows.Forms.StatusStrip();
+            this.tsslRes = new System.Windows.Forms.ToolStripStatusLabel();
             this.gbMission.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmcPay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmcCargo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmcHoldCapacity)).BeginInit();
+            this.ssResult.SuspendLayout();
             this.SuspendLayout();
             // 
             // lsvMissions
@@ -220,11 +223,28 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Ship Hold Capacity:";
             // 
+            // ssResult
+            // 
+            this.ssResult.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsslRes});
+            this.ssResult.Location = new System.Drawing.Point(0, 261);
+            this.ssResult.Name = "ssResult";
+            this.ssResult.Size = new System.Drawing.Size(455, 22);
+            this.ssResult.SizingGrip = false;
+            this.ssResult.TabIndex = 6;
+            this.ssResult.Text = "statusStrip1";
+            // 
+            // tsslRes
+            // 
+            this.tsslRes.Name = "tsslRes";
+            this.tsslRes.Size = new System.Drawing.Size(0, 17);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(455, 264);
+            this.ClientSize = new System.Drawing.Size(455, 283);
+            this.Controls.Add(this.ssResult);
             this.Controls.Add(this.nmcHoldCapacity);
             this.Controls.Add(this.gbMission);
             this.Controls.Add(this.btnSolve);
@@ -242,6 +262,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.nmcPay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmcCargo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmcHoldCapacity)).EndInit();
+            this.ssResult.ResumeLayout(false);
+            this.ssResult.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -266,6 +288,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.StatusStrip ssResult;
+        private System.Windows.Forms.ToolStripStatusLabel tsslRes;
     }
 }
 

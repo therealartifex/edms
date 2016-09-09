@@ -45,7 +45,7 @@ namespace EDMissionSolver
         private void btnSolve_Click(object sender, EventArgs e)
         {
             foreach (ListViewItem lvi in lsvMissions.Items) lvi.BackColor = SystemColors.Window;
-            var missions = lsvMissions.Items.Cast<ListViewItem>().Select(lvi => new Mission(int.Parse(lvi.SubItems[0].Text), int.Parse(lvi.SubItems[1].Text),int.Parse(lvi.SubItems[2].Text), lvi.SubItems[3].Text)).ToList();
+            var missions = lsvMissions.Items.Cast<ListViewItem>().Select(lvi => new Mission(int.Parse(lvi.SubItems[0].Text),int.Parse(lvi.SubItems[1].Text),int.Parse(lvi.SubItems[2].Text),lvi.SubItems[3].Text)).ToList();
             var holdCapacity = (int)nmcHoldCapacity.Value;
 
             // initialize model
@@ -69,11 +69,19 @@ namespace EDMissionSolver
             model.AddConstraints("holdCapacity", Model.Sum(Model.ForEach(mSet, c => cargo[c] * acc[c])) <= holdCapacity);
             model.AddGoal("maxPay", GoalKind.Maximize, Model.Sum(Model.ForEach(mSet, c => pay[c] * acc[c])));
 
-            sc.Solve(new SimplexDirective());
+            var sol = sc.Solve(new SimplexDirective());
 
             var i = 0;
             var dec = acc.GetValuesByIndex().ToArray();
             foreach (ListViewItem lvi in lsvMissions.Items) lvi.BackColor = Convert.ToBoolean(dec[i++]) ? Color.LimeGreen : Color.PaleVioletRed;
+            int spaceUsed = 0;
+            int j=0;
+            spaceUsed += missions.Sum(m => m.Cargo*(int)dec[j++]);
+            tsslRes.Text = $"Total Pay: {sol.Goals.First().ToInt32()}   Cargo space used: {spaceUsed}/{holdCapacity}";
+            
         }
+
+
+        
     }
 }
